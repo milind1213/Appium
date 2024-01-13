@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-14T00:09:25 IST" name="Suite" finished-at="2024-01-14T00:09:48 IST" duration-ms="23253">
+    <groups>
+    </groups>
+    <test started-at="2024-01-14T00:09:25 IST" name="Test" finished-at="2024-01-14T00:09:48 IST" duration-ms="23253">
+      <class name="testCases.testClass">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testCases.testClass@f1da57d]" started-at="2024-01-14T00:09:25 IST" name="launchApp" finished-at="2024-01-14T00:09:33 IST" duration-ms="8934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="runTest()[pri:0, instance:testCases.testClass@f1da57d]" started-at="2024-01-14T00:09:34 IST" name="runTest" finished-at="2024-01-14T00:09:44 IST" duration-ms="10068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testCases.testClass@f1da57d]" started-at="2024-01-14T00:09:44 IST" name="closeApp" finished-at="2024-01-14T00:09:48 IST" duration-ms="4163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testCases.testClass -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
