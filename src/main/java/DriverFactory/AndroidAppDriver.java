@@ -6,10 +6,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
+import CommonUtils.AppiumServer;
+
 public class AndroidAppDriver {
-	
 	public AndroidDriver driver;
+	 AppiumServer server = new AppiumServer();
 	public AndroidDriver getAndroidInstance() throws MalformedURLException {
+	
+		server.startServer();
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("Pixel 7 Pro API 31");
 		options.setApp("/home/milind/eclipse-workspace/projects/mobile/MobileSolutions/Apps/ApiDemos-debug.apk");
@@ -17,9 +21,9 @@ public class AndroidAppDriver {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 	 }
-
-	public AndroidDriver getDriver() {
+	
+	 public AndroidDriver getDriver() {
 		return driver;
-	}
+	 }
 
 }

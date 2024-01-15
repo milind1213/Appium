@@ -24,4 +24,22 @@ public class ConfigPropReader {
 
 		return configProp;
 	}
+	
+	
+	public Properties aap() {
+
+		configProp = new Properties();
+		try {
+			fis = new FileInputStream(System.getProperty("user.dir")+"/ConfigDirectory/Application.properties");
+			configProp.load(fis);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return configProp;
+	}
+	
 }

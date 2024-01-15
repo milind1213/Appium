@@ -1,4 +1,8 @@
 package com.MobileSolutions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -20,7 +24,8 @@ public class Servertest1 {
     private AndroidDriver driver;
     private AppiumDriverLocalService service;
 
-    @BeforeClass
+     @BeforeMethod
+	@BeforeClass
     public void setUp() throws MalformedURLException {
         service = new AppiumServiceBuilder()
                 .usingDriverExecutable(new File("/home/milind/.nvm/versions/node/v20.10.0/bin/node"))
@@ -44,12 +49,13 @@ public class Servertest1 {
 		driver.findElement(By.id("android:id/checkbox")).click();
 		driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click(); 
 		String alertTitle = driver.findElement(By.id("android:id/alertTitle")).getText();
-		Assert.assertEquals(alertTitle, "WiFi settings");	
+		AssertJUnit.assertEquals(alertTitle, "WiFi settings");	
 		driver.findElement(By.id("android:id/edit")).sendKeys("Wifi");
 		driver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
 		
     }
-    @AfterClass
+   @AfterMethod
+@AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();

@@ -1,6 +1,5 @@
 package com.MobileSolutions;
 
-import org.testng.annotations.Test;
 import java.io.File;
 import java.net.MalformedURLException;
 import io.appium.java_client.service.local.AppiumDriverLocalService;

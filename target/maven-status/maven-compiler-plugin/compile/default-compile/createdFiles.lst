@@ -1,7 +1,0 @@
-Utils/AppiumUtils.class
-Utils/Listeners.class
-Utils/ExtentReporterNG.class
-pageObjects/App.class
-CommonUtils/AndroidUtility.class
-Utils/ConfigPropReader.class
-DriverFactory/AndroidAppDriver.class

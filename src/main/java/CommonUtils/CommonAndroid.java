@@ -1,0 +1,113 @@
+package CommonUtils;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.AssertJUnit;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Utils.ConfigPropReader;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+public class CommonAndroid {
+	public static int EXPLICIT_WAIT_TIME;
+	public static int IMPLICIT_WAIT_TIME;
+	public static int DEFAULT_WAIT_TIME;
+	private static String APPIUM_PORT;
+	public static String DEVICE_NAME;
+	public static String APPLICATION_PATH;
+	public static String CHROME_DRIVER_PATH;
+	public static String BROWSER_NAME;
+	public static String APP_PASSWORD;
+	public static String AUTOMATION_INSTRUMENTATION;
+	public static String PLATFORM_NAME;
+	public static String NEW_COMMAND_TIMEOUT;
+	public static String PLATFORM_VERSION;
+	public static String DEVICE_READY_TIMEOUT;
+	public static String BASE_PKG;
+	public static String APP_ACTIVITY;
+	private static DesiredCapabilities capabilities = new DesiredCapabilities();
+    public static UiAutomator2Options options = new UiAutomator2Options();
+	public static ConfigPropReader config = new ConfigPropReader();
+	public AppiumServer  appiumServer = new AppiumServer();
+	private static URL serverUrl;
+	
+	@BeforeMethod(alwaysRun=true) 
+	public void loadConfigProp() throws IOException {
+		EXPLICIT_WAIT_TIME = Integer.parseInt(config.aap().getProperty("explicit.wait"));
+		IMPLICIT_WAIT_TIME = Integer.parseInt(config.aap().getProperty("implicit.wait"));
+		DEFAULT_WAIT_TIME = Integer.parseInt(config.aap().getProperty("default.wait"));
+		APPLICATION_PATH = config.aap().getProperty("application.path");
+		CHROME_DRIVER_PATH = config.aap().getProperty("chromedriver.path");
+		BASE_PKG = config.aap().getProperty("base.pkg");
+		APP_ACTIVITY = config.aap().getProperty("application.activity");
+		AUTOMATION_INSTRUMENTATION = config.aap().getProperty("automation.instumentation");
+		DEVICE_NAME = config.aap().getProperty("device.name");
+		BROWSER_NAME = config.aap().getProperty("browser.name");
+		PLATFORM_NAME = config.aap().getProperty("platform.name");
+		PLATFORM_VERSION = config.aap().getProperty("platform.version");
+		NEW_COMMAND_TIMEOUT = config.aap().getProperty("new.command.timeout");
+		DEVICE_READY_TIMEOUT = config.aap().getProperty("device.ready.timeout");
+		APPIUM_PORT = config.aap().getProperty("appium.server.port");
+	}
+
+	//@BeforeMethod(alwaysRun=true)
+	public static DesiredCapabilities setCapabilities() {
+		capabilities.setCapability("automationName", CommonAndroid.AUTOMATION_INSTRUMENTATION);
+		capabilities.setCapability("platformName", CommonAndroid.PLATFORM_NAME);
+		capabilities.setCapability("platformVersion", CommonAndroid.PLATFORM_VERSION);
+		capabilities.setCapability("deviceName", CommonAndroid.DEVICE_NAME);
+		capabilities.setCapability("app", CommonAndroid.APPLICATION_PATH);
+		//capabilities.setCapability("browserName", CommonAndroid.BROWSER_NAME);
+		capabilities.setCapability("newCommandTimeout", CommonAndroid.NEW_COMMAND_TIMEOUT);
+		capabilities.setCapability("deviceReadyTimeout", CommonAndroid.DEVICE_READY_TIMEOUT);
+		capabilities.setCapability("appActivity", CommonAndroid.APP_ACTIVITY);
+		capabilities.setCapability("appPackage", CommonAndroid.BASE_PKG);
+		return capabilities;
+	} 
+	//@BeforeMethod(alwaysRun=true)
+	public static UiAutomator2Options mobileBroserOptions() {
+		options.setDeviceName(CommonAndroid.DEVICE_NAME);
+		options.setChromedriverExecutable(CommonAndroid.CHROME_DRIVER_PATH);
+		options.setCapability("browserName",CommonAndroid.BROWSER_NAME);
+		options.setPlatformName(CommonAndroid.PLATFORM_NAME);
+		options.setPlatformVersion(CommonAndroid.PLATFORM_VERSION);
+		options.setAutomationName(CommonAndroid.AUTOMATION_INSTRUMENTATION);
+		return options;
+	}
+	
+	//@BeforeMethod(alwaysRun=true)
+	public static UiAutomator2Options setAndroidUiAutomator2AndOptions() {
+		options.setDeviceName(CommonAndroid.DEVICE_NAME);
+		options.setApp(CommonAndroid.APPLICATION_PATH);
+		options.setPlatformName(CommonAndroid.PLATFORM_NAME);
+		options.setPlatformVersion(CommonAndroid.PLATFORM_VERSION);
+		options.setAutomationName(CommonAndroid.AUTOMATION_INSTRUMENTATION);
+		options.setAppActivity(CommonAndroid.APP_ACTIVITY);
+		options.setAppPackage(CommonAndroid.BASE_PKG);
+		return options;
+	}
+
+	@Test
+	public void testMethod() throws Exception{
+		appiumServer.startServer();
+		AndroidDriver driver = new AndroidDriver(new URL(config.prop().getProperty("URL")),options);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(AppiumBy.accessibilityId("Preference")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='3. Preference dependencies']")).click();
+		driver.findElement(By.id("android:id/checkbox")).click();
+		driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
+		String alertTitle = driver.findElement(By.id("android:id/alertTitle")).getText();
+		AssertJUnit.assertEquals(alertTitle, "WiFi settings");
+		driver.findElement(By.id("android:id/edit")).sendKeys("Wifi");
+		driver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
+		appiumServer.stopServer();
+	}
+	
+}

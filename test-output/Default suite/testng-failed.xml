@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.testClass">
+      <class name="com.MobileSolutions.NoBrokerHood">
         <methods>
-          <include name="launchApp"/>
-          <include name="closeApp"/>
-          <include name="runTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testAppiumServer"/>
         </methods>
-      </class> <!-- testCases.testClass -->
+      </class> <!-- com.MobileSolutions.NoBrokerHood -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

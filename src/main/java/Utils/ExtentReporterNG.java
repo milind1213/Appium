@@ -14,14 +14,13 @@ public class ExtentReporterNG {
 
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
-		extent.setSystemInfo("UserName", "Milind G");
+		extent.setSystemInfo("UserName", "Milind Ghongade");
 		extent.setSystemInfo("OS", "Ubuntu/Linux");
 		extent.setSystemInfo("Os Vesrion", "22.04");
 		extent.setSystemInfo("Java Version", "11.0.20");
 		extent.setSystemInfo("Time", "Asia/Calcuta");
 		extent.setSystemInfo("User Language", "English");
-		extent.setSystemInfo("Admin", "Milind G");
+		extent.setSystemInfo("Admin", "Milind Ghongade");
 		return extent;
-
 	}
 }
