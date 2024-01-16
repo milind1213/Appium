@@ -25,7 +25,6 @@ public class ConfigPropReader {
 		return configProp;
 	}
 	
-	
 	public Properties aap() {
 
 		configProp = new Properties();

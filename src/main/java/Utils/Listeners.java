@@ -1,7 +1,10 @@
 package Utils;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -11,7 +14,7 @@ import com.aventstack.extentreports.Status;
 
 import io.appium.java_client.AppiumDriver;
 
-public class Listeners extends AppiumUtils implements ITestListener {
+public class Listeners implements ITestListener {
 
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReporterObject();
@@ -59,6 +62,13 @@ public class Listeners extends AppiumUtils implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();
+	}
+
+	public String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException {
+		File source = driver.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir") + "//reports" + testCaseName + ".png";
+		FileUtils.copyFile(source, new File(destinationFile));
+		return destinationFile;
 	}
 
 }

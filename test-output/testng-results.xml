@@ -1,89 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-15T22:26:26 IST" name="Default suite" finished-at="2024-01-15T22:26:39 IST" duration-ms="13493">
+  <suite started-at="2024-01-17T01:03:20 IST" name="Default suite" finished-at="2024-01-17T01:04:34 IST" duration-ms="74519">
     <groups>
     </groups>
-    <test started-at="2024-01-15T22:26:26 IST" name="Default test" finished-at="2024-01-15T22:26:39 IST" duration-ms="13493">
-      <class name="com.MobileSolutions.NoBrokerHood">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.MobileSolutions.NoBrokerHood@5b8dfcc1]" started-at="2024-01-15T22:26:26 IST" name="setUp" finished-at="2024-01-15T22:26:27 IST" duration-ms="1357" status="PASS">
+    <test started-at="2024-01-17T01:03:20 IST" name="Default test" finished-at="2024-01-17T01:04:34 IST" duration-ms="74519">
+      <class name="TestComponent.NewBaseTest">
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:20 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:20 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAppiumServer()[pri:0, instance:com.MobileSolutions.NoBrokerHood@5b8dfcc1]" started-at="2024-01-15T22:26:27 IST" name="testAppiumServer" finished-at="2024-01-15T22:26:36 IST" duration-ms="8639" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '11.0.21'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [afc8e846-0271-47be-9a34-cc793ab11089, findElement {using=accessibility id, value=Preference}]
-Capabilities {appium:app: /home/milind/eclipse-worksp..., appium:appPackage: io.appium.android.apis, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /home/milind/eclipse-worksp..., automationName: UIAutomator2, deviceName: Pixel 7 Pro API 31, platformName: ANDROID}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 3036, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: afc8e846-0271-47be-9a34-cc793ab11089]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '11.0.21'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [afc8e846-0271-47be-9a34-cc793ab11089, findElement {using=accessibility id, value=Preference}]
-Capabilities {appium:app: /home/milind/eclipse-worksp..., appium:appPackage: io.appium.android.apis, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /home/milind/eclipse-worksp..., automationName: UIAutomator2, deviceName: Pixel 7 Pro API 31, platformName: ANDROID}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 3036, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: afc8e846-0271-47be-9a34-cc793ab11089
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-at com.MobileSolutions.NoBrokerHood.testAppiumServer(NoBrokerHood.java:43)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        </test-method> <!-- loadConfigProp -->
+        <test-method signature="wifiCoonectionSetting()[pri:1, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:20 IST" name="wifiCoonectionSetting" finished-at="2024-01-17T01:03:36 IST" duration-ms="15771" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAppiumServer -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MobileSolutions.NoBrokerHood@5b8dfcc1]" started-at="2024-01-15T22:26:36 IST" name="tearDown" finished-at="2024-01-15T22:26:39 IST" duration-ms="3466" status="PASS">
+        </test-method> <!-- wifiCoonectionSetting -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="quitDriver" finished-at="2024-01-17T01:03:36 IST" duration-ms="490" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.MobileSolutions.NoBrokerHood -->
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:36 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfigProp -->
+        <test-method signature="longpress()[pri:2, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="longpress" finished-at="2024-01-17T01:03:52 IST" duration-ms="16210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- longpress -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:52 IST" name="quitDriver" finished-at="2024-01-17T01:03:53 IST" duration-ms="703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:53 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:53 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfigProp -->
+        <test-method signature="swipePics()[pri:3, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:53 IST" name="swipePics" finished-at="2024-01-17T01:04:07 IST" duration-ms="13570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipePics -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:07 IST" name="quitDriver" finished-at="2024-01-17T01:04:10 IST" duration-ms="3766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:10 IST" name="loadConfigProp" finished-at="2024-01-17T01:04:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfigProp -->
+        <test-method signature="mislenius()[pri:4, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:10 IST" name="mislenius" finished-at="2024-01-17T01:04:30 IST" duration-ms="19268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mislenius -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:30 IST" name="quitDriver" finished-at="2024-01-17T01:04:34 IST" duration-ms="4677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- TestComponent.NewBaseTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

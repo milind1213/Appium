@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.MobileSolutions.NoBrokerHood">
+      <class name="TestComponent.NewBaseTest">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testAppiumServer"/>
+          <include name="quitDriver"/>
+          <include name="loadConfigProp"/>
+          <include name="mislenius"/>
         </methods>
-      </class> <!-- com.MobileSolutions.NoBrokerHood -->
+      </class> <!-- TestComponent.NewBaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
