@@ -24,25 +24,23 @@ public class ApiDemosPreferencePage extends AppiumActions {
 	}
 
 	// WIFI
-
 	@AndroidFindBy(accessibility = "Preference")
 	public WebElement preference;
-
+	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='3. Preference dependencies']")
 	private WebElement preferenceDependency;
-
+	
 	@AndroidFindBy(id = "android:id/checkbox")
 	private WebElement wifiCheckBox;
-
+	
 	@AndroidFindBy(xpath = "(//android.widget.RelativeLayout)[2]")
 	private WebElement wifiSettings;
-
+	
 	@AndroidFindBy(id = "android:id/edit")
 	private WebElement editField;
-
+	
 	@AndroidFindBy(className = "android.widget.Button")
 	private List<WebElement> buttons;
-
 
 	public void clickPreference() {
 		preference.click();
@@ -69,8 +67,7 @@ public class ApiDemosPreferencePage extends AppiumActions {
 	public void clickButtonByIndex(int index) {
 		buttons.get(index).click();
 	}
-	
-	
+
 	public void mns() {
 		driver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
 	}
@@ -91,7 +88,7 @@ public class ApiDemosPreferencePage extends AppiumActions {
 
 	@AndroidFindBy(id = "android:id/title")
 	private WebElement title;
-	
+
 	public void longPress() {
 		views.click();
 		expandableLists.click();

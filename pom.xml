@@ -3,11 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com</groupId>
 	<artifactId>MobileSolutions</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<name>MobileSolutions</name>
 	<url>http://www.example.com</url>
 
@@ -18,28 +16,28 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- TestNG -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
+			<version>7.9.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<!--Appium java-client-->
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>9.0.0</version>
 		</dependency>
 
-		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- Selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.16.1</version>
 		</dependency>
 
-		<!--https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!--WebdriverManager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -60,6 +58,7 @@
 			<version>7.14.0</version>
 		</dependency>
 
+		<!-- RestAssured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -93,35 +92,43 @@
 			<artifactId>poi</artifactId>
 			<version>5.2.3</version>
 		</dependency>
-
+		
 		<!-- Extent Reports -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.13.0</version>
 		</dependency>
-
-		<!--   slf4j-api  -->
+		
+		<!--   log4j-core  -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.14.1</version> <!-- Use the latest version -->
+			<version>2.22.1</version> <!-- Use the latest version -->
 		</dependency>
+
+
+		<!--   log4j-api  -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.22.1</version>
+		</dependency>
+
 
 		<!--   slf4j-api  -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.32</version> <!-- Use the latest version -->
+			<version>1.7.32</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+		<!--Javafaker -->
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-
 
 	</dependencies>
 
@@ -146,7 +153,7 @@
 
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.1.2</version>
+					<version>3.2.5</version>
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>

@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestComponent.NewBaseTest">
+      <class name="TestCases.ResidentApplaunch">
         <methods>
-          <include name="quitDriver"/>
           <include name="loadConfigProp"/>
-          <include name="mislenius"/>
+          <include name="quitServer"/>
+          <include name="launchAPplication"/>
+          <include name="quitDriver"/>
         </methods>
-      </class> <!-- TestComponent.NewBaseTest -->
+      </class> <!-- TestCases.ResidentApplaunch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

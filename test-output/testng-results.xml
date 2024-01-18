@@ -1,61 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-17T01:03:20 IST" name="Default suite" finished-at="2024-01-17T01:04:34 IST" duration-ms="74519">
+  <suite started-at="2024-01-18T11:43:36 IST" name="Default suite" finished-at="2024-01-18T11:44:12 IST" duration-ms="35703">
     <groups>
     </groups>
-    <test started-at="2024-01-17T01:03:20 IST" name="Default test" finished-at="2024-01-17T01:04:34 IST" duration-ms="74519">
-      <class name="TestComponent.NewBaseTest">
-        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:20 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:20 IST" duration-ms="7" status="PASS">
+    <test started-at="2024-01-18T11:43:36 IST" name="Default test" finished-at="2024-01-18T11:44:12 IST" duration-ms="35703">
+      <class name="TestCases.ResidentApplaunch">
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestCases.ResidentApplaunch@482bce4f]" started-at="2024-01-18T11:43:36 IST" name="loadConfigProp" finished-at="2024-01-18T11:43:36 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfigProp -->
-        <test-method signature="wifiCoonectionSetting()[pri:1, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:20 IST" name="wifiCoonectionSetting" finished-at="2024-01-17T01:03:36 IST" duration-ms="15771" status="PASS">
+        <test-method signature="launchAPplication()[pri:0, instance:TestCases.ResidentApplaunch@482bce4f]" started-at="2024-01-18T11:43:36 IST" name="launchAPplication" finished-at="2024-01-18T11:44:08 IST" duration-ms="31609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wifiCoonectionSetting -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="quitDriver" finished-at="2024-01-17T01:03:36 IST" duration-ms="490" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:36 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfigProp -->
-        <test-method signature="longpress()[pri:2, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:36 IST" name="longpress" finished-at="2024-01-17T01:03:52 IST" duration-ms="16210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- longpress -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:52 IST" name="quitDriver" finished-at="2024-01-17T01:03:53 IST" duration-ms="703" status="PASS">
+        </test-method> <!-- launchAPplication -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestCases.ResidentApplaunch@482bce4f]" started-at="2024-01-18T11:44:08 IST" name="quitDriver" finished-at="2024-01-18T11:44:08 IST" duration-ms="478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:53 IST" name="loadConfigProp" finished-at="2024-01-17T01:03:53 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="quitServer()[pri:0, instance:TestCases.ResidentApplaunch@482bce4f]" started-at="2024-01-18T11:44:08 IST" name="quitServer" finished-at="2024-01-18T11:44:12 IST" duration-ms="3569" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadConfigProp -->
-        <test-method signature="swipePics()[pri:3, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:03:53 IST" name="swipePics" finished-at="2024-01-17T01:04:07 IST" duration-ms="13570" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swipePics -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:07 IST" name="quitDriver" finished-at="2024-01-17T01:04:10 IST" duration-ms="3766" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:10 IST" name="loadConfigProp" finished-at="2024-01-17T01:04:10 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfigProp -->
-        <test-method signature="mislenius()[pri:4, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:10 IST" name="mislenius" finished-at="2024-01-17T01:04:30 IST" duration-ms="19268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mislenius -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestComponent.NewBaseTest@366647c2]" started-at="2024-01-17T01:04:30 IST" name="quitDriver" finished-at="2024-01-17T01:04:34 IST" duration-ms="4677" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- TestComponent.NewBaseTest -->
+        </test-method> <!-- quitServer -->
+      </class> <!-- TestCases.ResidentApplaunch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
